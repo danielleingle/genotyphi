@@ -159,6 +159,10 @@ Note that due to the nested hierarchical nature of the GenoTyphi scheme, we need
 #### Output
 
 * TSV file, one row per input JSON file
+  
+#### Compute requirements
+
+Benchmarking was tested on 100 genomes capturing all genotypes in the GenoTyphi scheme. The `mykrobe predict` command can be run with multiple threads using the `--threads`/`-t` option. Up to ~4 threads will increase performance. Using >8 threads is likely to degrade performance. On a modern computer, the `mykrobe predict` command typically takes less than 1 minute to complete. With multiple threads on a very fast CPU, it might only take a few seconds. `mykrobe predict` is very memory efficient and will typically use less than 100 MB of RAM.
 
 #### Example command
 ```
